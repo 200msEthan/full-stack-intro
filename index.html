@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
     <nav>
         <div class="nav-container">
             <ul class="nav-links">
@@ -26,7 +25,7 @@
         </div>
     </section>
     <section id="about">
-        <div class="about-me">
+        <div class="about-me fade-in-section">
             <img src="favicon.webp" alt="Profile Picture" class="profile-pic">
             <div>
                 <h2>About Me</h2>
@@ -34,7 +33,7 @@
                 加速推動兩校在資訊領域的發展，同時引領更多的新人成為人才，♾️ 循環。</p>
             </div>
         </div>
-            <div class="tech-stack">
+            <div class="tech-stack fade-in-section">
                 <h2>Tech Stack</h2>
                 <div class="tech-icon-wrapper">
                     <div class="tech-icons">
@@ -64,7 +63,7 @@
                 </div>
             </div>
     </div>
-    	<div class="timeline">
+    	<div class="timeline fade-in-section">
         <h2>Timeline</h2>
             <ul>
                 <li><strong>1992：</strong>交大校園網路策進會 CCCA（SDC 前身）成立</li>
@@ -109,11 +108,12 @@
             </svg>
         </a>
     </div>
-    <div class="contact-form">
-        <input type="text" placeholder="Please enter your name">
-        <input type="email" placeholder="Please enter your email">
-        <textarea placeholder="Please enter your message"></textarea>
-    </div>
+    <form class="contact-form" action="https://formspree.io/f/xjkdngqv" method="POST">
+        <input type="text" name="name" placeholder="Please enter your name" required>
+        <input type="email" name="_replyto" placeholder="Please enter your email" required>
+        <textarea name="message" placeholder="Please enter your message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
     </section>
     <script src="script.js"></script>
 </body>

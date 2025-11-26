@@ -415,6 +415,24 @@ html {
     transform: translateY(-2px);
 }
 
+#home,
+#projects,
+#contact,
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+#home.visible,
+#about.visible,
+#projects.visible,
+#contact.visible,
+.fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 @keyframes scroll {
     from {
         transform: translateX(0);
