@@ -106,7 +106,7 @@ html {
     margin-bottom: 12px;
 }
 
-#about h2:hover{
+.about-text h2:hover{
     animation: chroma-rotate-text 10s infinite forwards;
 }
 
