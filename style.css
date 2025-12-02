@@ -31,9 +31,7 @@
     right: 0;  /* 距離父元素右邊 0px */
     height: 2px;
     background-color: black;
-    animation-name: slideIn;
-    animation-duration: 0.3s;
-    animation: ease;
+    animation: slideIn 0.3s ease;
 }
 
 nav {
@@ -106,6 +104,10 @@ html {
 #about h2 {
     font-size: 50px;
     margin-bottom: 12px;
+}
+
+#about h2:hover{
+    animation: chroma-rotate-text 10s infinite forwards;
 }
 
 #about p {
@@ -273,6 +275,77 @@ html {
     cursor: pointer;
 }
 
+#see_also {
+    margin-top: 150px;
+    line-height: 2;
+    margin-bottom: 12px;
+}
+
+#see_also h2 {
+    padding-left: 80px;
+    font-size: 50px;
+    margin-bottom: 12.5px;
+}
+
+#see_also a {
+    color: black;
+    text-decoration: underline;
+}
+
+.see-also-container {
+    overflow-x: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scrollbar-width: none;
+    gap: 250px;
+}
+
+
+.sdc-info {
+    margin-top: 12.5px;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    list-style-type: none;
+}
+
+.nycu-info {
+    margin-top: 12.5px;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    list-style-type: none;
+}
+
+.nycu-link:hover + .see-also-nycu-image {
+    animation: pulse 1s infinite;
+}
+
+.sdc-link:hover + .see-also-sdc-image {
+    animation: pulse 1s infinite;
+}
+
+.see-also-sdc-image{
+    width: 200px;
+    height: 200px;
+    margin: 12.5px;
+    object-fit: contain;
+}
+
+.see-also-nycu-image{
+    width: 200px;
+    height: 200px;
+    margin: 12.5px;
+    object-fit: contain;
+}
+
 #contact {
     padding: 80px;
 }
@@ -418,6 +491,7 @@ html {
 #home,
 #projects,
 #contact,
+#see_also,
 .fade-in-section {
     opacity: 0;
     transform: translateY(50px);
@@ -428,6 +502,7 @@ html {
 #about.visible,
 #projects.visible,
 #contact.visible,
+#see_also.visible,
 .fade-in-section.visible {
     opacity: 1;
     transform: translateY(0);
@@ -454,5 +529,47 @@ html {
     } 
     to {
         transform: scaleX(1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes chroma-rotate-text {
+    0% {
+        color: rgb(103, 1, 1);
+    }
+    10% {
+        color: rgb(195, 0, 0);
+    }
+    20% {
+        color: orangeRed;
+    }
+    50% {
+        color: orange;
+    }
+    60% {
+        color: yellow;
+    }
+    70% {
+        color: green;
+    }
+    80% {
+        color: blue;
+    }
+    90% {
+        color: indigo;
+    }
+    100% {
+        color: violet;
     }
 }
